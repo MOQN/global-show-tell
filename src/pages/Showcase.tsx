@@ -618,7 +618,7 @@ const Showcase: React.FC = () => {
   };
 
   // Scroll handlers - zoom in/out centered on canvas center
-  const handleWheel = (e: React.WheelEvent) => {
+  const handleWheel = (e: WheelEvent) => {
     e.preventDefault();
     const delta = 0.009;
     setScale(prev => {
@@ -633,6 +633,16 @@ const Showcase: React.FC = () => {
       return newScale;
     });
   };
+
+  useEffect(() => {
+    const el = outerRef.current;
+    if (!el) return;
+
+    el.addEventListener('wheel', handleWheel, { passive: false });
+    return () => {
+      el.removeEventListener('wheel', handleWheel);
+    };
+  }, [handleWheel]);
 
 
 
@@ -745,7 +755,6 @@ const Showcase: React.FC = () => {
           }}
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseLeave}
-          onWheel={handleWheel}
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}

@@ -129,6 +129,20 @@ const Navbar: React.FC = () => {
             <svg className="vector vector-1" width="18" height="36" viewBox="0 0 18 38" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M17 36.5L2 18.5732L17 1.5" stroke="black" strokeWidth="2" />
             </svg>
+<<<<<<< HEAD
+=======
+            <svg className="vector vector-2" width="13" height="36" viewBox="0 0 13 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 35.5L2 17.5732L12 0.499999" stroke="black" strokeWidth="2" />
+            </svg>
+            <svg className="vector vector-3" width="22" height="36" viewBox="0 0 22 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 36.5L2 18.5732L21 1.5" stroke="black" strokeWidth="2" />
+            </svg>
+
+            <svg className="vector vector-4" width="18" height="36" viewBox="0 0 18 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17 36.5L2 18.5732L17 1.5" stroke="black" strokeWidth="2" />
+            </svg>
+
+>>>>>>> origin/main
           </div>
         </button>
       )
